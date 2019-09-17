@@ -5,6 +5,10 @@ section header {
   transition:0.3s ease-out;
 }
 
+section header h2 {
+  font-weight: normal;
+}
+
 section header.active {
   background:green;
 }
