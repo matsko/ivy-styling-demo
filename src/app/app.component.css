@@ -1,0 +1,38 @@
+:host {
+  height:100vh;
+  position: relative;
+  display:grid;
+  grid-template: 100fr / 80fr 20fr;
+  background: #5691E1;
+}
+
+.content {
+  position:relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content:after {
+  content:"";
+  border-radius:10px;
+  position:absolute;
+  top:20px;
+  left:20px;
+  bottom:20px;
+  right:20px;
+  z-index:1;
+  background:rgba(255,255,255,0.2);
+}
+
+app-side-bar {
+  position:relative;
+  color:white;
+  background:#ddd;
+}
+
+app-modal {
+
+  position: relative;
+  z-index:2;
+}

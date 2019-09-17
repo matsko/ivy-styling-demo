@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ToggleEvent} from './toggle.directive';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'NgStyling';
+  private _toggles = {
+    'style.width': true,
+    'style.height': true,
+    'style.transform': true,
+    'style': true,
+    'dir-styles': true,
+  };
+
+  private _values = {
+    'style.width': '800px',
+    'style.height': '800px',
+    'style.transform': 'none',
+    'style': {
+      width: '600px',
+      height: '500px',
+      border: '10px solid black',
+    },
+    'dir-styles': {
+      color: 'maroon',
+      'box-shadow': '0 0 10px black',
+      'transform': 'rotate(-2deg)'
+    }
+  };
+
+  getValue(name: string) {
+    return this._toggles[name] ? this._values[name] : null;
+  }
+
+  getBinding(name: string) {
+    return {value: this._values[name], active: this._toggles[name]};
+  }
+
+  onToggle(event: ToggleEvent) {
+    this._toggles[event.name] = event.value;
+  }
 }

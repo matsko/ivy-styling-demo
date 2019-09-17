@@ -1,0 +1,41 @@
+:host {
+  background: white;
+  text-align: center;
+  position: relative;
+  font-size:2em;
+}
+
+.content {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  transform:translate(-50%,-50%);
+}
+
+code {
+  background:black;
+  color:white;
+  display:block;
+  padding:1% 5%;
+  text-align: left;
+  color:lightgreen;
+}
+
+code b {
+  font-weight: normal;
+  color:lightblue;
+}
+
+code .text {
+  color:white;
+}
+
+code i {
+  font-style: normal;
+  color:#ccc;
+}
+
+.comment {
+  padding:5% 10%;
+}

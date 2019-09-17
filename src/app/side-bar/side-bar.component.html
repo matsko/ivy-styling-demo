@@ -1,0 +1,54 @@
+<section>
+  <header toggle="style.width"
+          [toggle-active]="width.active"
+          (toggle)="emitToggle($event)">
+    <h2>[style.width]</h2>
+  </header>
+  <div class="content">
+    <pre>{{ width.value | json }}</pre>
+  </div>
+</section>
+
+<section>
+  <header toggle="style.height"
+          [toggle-active]="height.active"
+          (toggle)="emitToggle($event)">
+    <h2>[style.height]</h2>
+  </header>
+  <div class="content">
+    <pre>{{ height.value | json }}</pre>
+  </div>
+</section>
+
+<section>
+  <header toggle="style.transform"
+          [toggle-active]="transform.active"
+          (toggle)="emitToggle($event)">
+    <h2>[style.transform]</h2>
+  </header>
+  <div class="content">
+    <pre>{{ transform.value | json }}</pre>
+  </div>
+</section>
+
+<section>
+  <header toggle="style"
+          [toggle-active]="templateStyles.active"
+          (toggle)="emitToggle($event)">
+    <h2>[style]</h2>
+  </header>
+  <div class="content">
+    <pre>{{ templateStyles.value | json }}</pre>
+  </div>
+</section>
+
+<section>
+  <header toggle="dir-styles"
+          [toggle-active]="directiveStyles.active"
+          (toggle)="emitToggle($event)">
+    <h2>dir-that-sets-styles</h2>
+  </header>
+  <div class="content">
+    <pre>{{ directiveStyles.value | json }}</pre>
+  </div>
+</section>
