@@ -11,6 +11,10 @@ export interface ToggleEvent {
   selector: '[toggle]'
 })
 export class ToggleDirective {
+  @HostBinding('class.noop')
+  @Input('toggle-noop')
+  public noop: boolean;
+
   @Input('toggle')
   public name: string|null = null;
 
@@ -23,6 +27,7 @@ export class ToggleDirective {
 
   @HostListener('click', ['$event'])
   onClick(event: Event) {
+    if (this.noop) return;
     event.stopPropagation();
     this.active = !this.active;
     const value: ToggleEvent = {

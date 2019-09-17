@@ -16,6 +16,9 @@ export class SideBarComponent {
   @Input('directiveStyles')
   directiveStyles = null;
 
+  @Input('modalStyles')
+  modalStyles = null;
+
   @Input('width')
   width = null;
 

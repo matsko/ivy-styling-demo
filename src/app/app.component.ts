@@ -13,6 +13,7 @@ export class AppComponent {
     'style.transform': true,
     'style': true,
     'dir-styles': true,
+    'modal-styles': true,
   };
 
   private _values = {
@@ -26,8 +27,12 @@ export class AppComponent {
     },
     'dir-styles': {
       color: 'maroon',
-      'box-shadow': '0 0 10px black',
       'transform': 'rotate(-2deg)'
+    },
+    'modal-styles': {
+      width: '90%',
+      height: '90%',
+      'box-shadow': '0 0 10px black',
     }
   };
 

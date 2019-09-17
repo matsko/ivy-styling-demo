@@ -1,13 +1,16 @@
 section header {
   background:#222;
   color:white;
-  cursor: pointer;
   padding:10px 20px;
   transition:0.3s ease-out;
 }
 
 section header.active {
   background:green;
+}
+
+section header:not(.noop) {
+  cursor: pointer;
 }
 
 section {

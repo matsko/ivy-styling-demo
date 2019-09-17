@@ -52,3 +52,15 @@
     <pre>{{ directiveStyles.value | json }}</pre>
   </div>
 </section>
+
+<section>
+  <header toggle="modal-styles"
+          [toggle-noop]="true"
+          [toggle-active]="modalStyles.active"
+          (toggle)="emitToggle($event)">
+    <h2>&lt;modal&gt;</h2>
+  </header>
+  <div class="content">
+    <pre>{{ modalStyles.value | json }}</pre>
+  </div>
+</section>
