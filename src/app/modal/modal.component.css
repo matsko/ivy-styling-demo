@@ -38,4 +38,18 @@ code i {
 
 .comment {
   padding:5% 10%;
+  background:maroon;
+  position:relative;
+  color:white;
+}
+
+.comment:after {
+  position:absolute;
+  width:0;
+  height:0;
+  content:"";
+  top:-30px;
+  left:15%;
+  border:15px solid transparent;
+  border-bottom-color:maroon;
 }

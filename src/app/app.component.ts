@@ -26,7 +26,6 @@ export class AppComponent {
       border: '10px solid black',
     },
     'dir-styles': {
-      color: 'maroon',
       'transform': 'rotate(-2deg)'
     },
     'modal-styles': {

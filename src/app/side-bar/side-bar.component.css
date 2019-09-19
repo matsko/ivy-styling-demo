@@ -1,25 +1,35 @@
 section header {
+  position:relative;
   background:#222;
   color:white;
-  padding:10px 20px;
+  padding:10px 20px 10px 80px;
   transition:0.3s ease-out;
+}
+
+section header:after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:10px;
+  width:50px;
+  height:50px;
+  background:url(/assets/radio-off.svg) no-repeat center center / 100% auto;
+}
+
+section header.active:after {
+  background-image:url(/assets/radio-on.svg);
+}
+
+section header.active {
+  background-color:green;
 }
 
 section header h2 {
   font-weight: normal;
 }
 
-section header.active {
-  background:green;
-}
-
 section header:not(.noop) {
   cursor: pointer;
-}
-
-section {
-  background:white;
-  color:black;
 }
 
 section .content {
